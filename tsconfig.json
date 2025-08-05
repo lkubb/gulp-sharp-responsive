@@ -3,7 +3,9 @@
 		"strict": true,
 		"alwaysStrict": true,
 		"target": "ES5",
+		"outDir": "./lib",
+		"rootDir": "./src",
 		"esModuleInterop": true
 	},
-	"exclude": ["lib"]
+	"exclude": ["lib", "test"]
 }
