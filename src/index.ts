@@ -31,7 +31,7 @@ const getFormat = (filePath: string, format?: FileFormat): string => {
 	return getFileExtension(filePath);
 };
 
-const formatIsValid = (format: string): boolean => ["jpeg", "png", "webp", "gif", "tiff", "avif", "heif"].includes(format);
+const formatIsValid = (format: string): boolean => ["jpeg", "png", "webp", "gif", "tiff", "avif", "heif", "jxl"].includes(format);
 
 const addImageOptimizationStep = (promise: Sharp, format: string, option: IFormatOptions): Sharp => {
 	let updatedPromise = promise;
@@ -63,6 +63,10 @@ const addImageOptimizationStep = (promise: Sharp, format: string, option: IForma
 
 	if (format === "tiff" && option.tiffOptions !== null && option.tiffOptions !== undefined && typeof option.tiffOptions === "object") {
 		updatedPromise.tiff(option.tiffOptions);
+	}
+
+	if (format === "jxl" && option.jxlOptions !== null && option.jxlOptions !== undefined && typeof option.jxlOptions === "object") {
+		updatedPromise.jxl(option.jxlOptions);
 	}
 
 	return updatedPromise;

@@ -1,1 +1,1 @@
-declare type FileFormat = "jpeg" | "png" | "webp" | "gif" | "tiff" | "avif" | "heif";
+declare type FileFormat = "jpeg" | "png" | "webp" | "gif" | "tiff" | "avif" | "heif" | "jxl";

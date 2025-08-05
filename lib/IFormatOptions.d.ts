@@ -1,5 +1,5 @@
 import { Specification } from "rename";
-import { SharpOptions, AvifOptions, GifOptions, HeifOptions, JpegOptions, PngOptions, TiffOptions, WebpOptions } from "sharp";
+import { SharpOptions, AvifOptions, GifOptions, HeifOptions, JpegOptions, JxlOptions, PngOptions, TiffOptions, WebpOptions } from "sharp";
 import IFileMetadata from "./IFileMetadata";
 export default interface IFormatOptions {
     /**
@@ -22,6 +22,12 @@ export default interface IFormatOptions {
      * @see https://sharp.pixelplumbing.com/api-output#jpeg
      */
     jpegOptions?: JpegOptions;
+    /**
+     * JPEG XL optimizations options.
+     *
+     * @see https://sharp.pixelplumbing.com/api-output#jxl
+     */
+    jxlOptions?: JxlOptions;
     /**
      * PNG optimizations options.
      *
